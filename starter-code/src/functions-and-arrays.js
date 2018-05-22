@@ -133,6 +133,7 @@ var wordsFind = [
 ];
 
 function doesWordExist(stringArray,targetString){
+  
   for ( i = 0; i < stringArray.length; i++) {
     if(stringArray[i]==targetString){
       return true;
@@ -157,6 +158,7 @@ var wordsCount = [
 ];
 
 function howManyTimes(stringArray,targetString){
+  if (stringArray[0]!=null) {
   var counter=0;
   for(i=0;i<stringArray.length;i++){
     if(targetString==stringArray[i]){
@@ -164,6 +166,9 @@ function howManyTimes(stringArray,targetString){
     }
   }
   return counter;
+} else {
+  return false;
+}
 }
 // Bonus Quest
 
